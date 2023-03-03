@@ -12,7 +12,8 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
 //    private final DiscountPolicy discountPolicy = new FixDiscountPoicy();
-    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
+//    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
+    private DiscountPolicy discountPolicy;
 
     /**
      * 주문생성 기능
