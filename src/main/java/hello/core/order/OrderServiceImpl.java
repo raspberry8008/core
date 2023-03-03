@@ -2,6 +2,7 @@ package hello.core.order;
 
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPoicy;
+import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
@@ -9,7 +10,9 @@ import hello.core.member.MemoryMemberRepository;
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPoicy();
+
+//    private final DiscountPolicy discountPolicy = new FixDiscountPoicy();
+    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
     /**
      * 주문생성 기능
